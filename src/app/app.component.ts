@@ -1,14 +1,29 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <label>Insert your name:   </label>
-        <input [(ngModel)]="name" placeholder="name">
-        <h1>Welcome {{name}}!</h1>
-    `
+    template: `        
+        <div [ngClass]="{verdanaFont:true}"> <!-- hardcoded value "true"-->            
+            <h1 [class.red]="true">Angular 9 ngClass Directives</h1>  <!-- -->
+            <p [ngClass]="{segoePrintFont:isSegoe}"> <!-- bind to expression "isSegoe" -->
+                Angular 9 provides a module architecture of app
+            </p>
+        </div>
+    `,
+    styles: [`
+        .red {
+            color: red;
+        }
+        .verdanaFont {
+            font-size: 13px;
+            font-family: Verdana;
+        }
+        .segoePrintFont {
+            font-size: 14px;
+            font-family: "Segoe Print";
+        }
+    `]
 })
-
 export class AppComponent {
-    name: string = '';
+    isSegoe: boolean = true;
 }
