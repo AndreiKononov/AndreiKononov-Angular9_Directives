@@ -14,12 +14,13 @@ export class BoldDirective3 {
     }
 
     onMouseEnter() {
-        this.setFontWeight("bold");
+        this.setFontWeight("bold", "blue");
     }
     onMouseLeave() {
         this.setFontWeight("normal");
     }
-    private setFontWeight(val: string) {
+    private setFontWeight(val: string, color: string = 'black') {
         this.renderer.setStyle(this.element.nativeElement, "font-weight", val);
+        this.renderer.setStyle(this.element.nativeElement, "color", color);
     }
 }
