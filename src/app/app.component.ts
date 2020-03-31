@@ -1,14 +1,17 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
     template: `
-        <label>Insert your name:   </label>
-        <input [(ngModel)]="name" placeholder="name">
-        <h1>Welcome {{name}}!</h1>
+        <div>
+            <p bold>
+                Creating of custom directive "bold"
+            </p>
+            <p bold2>
+                Angular 9 provides a module architecture of app
+            </p>
+        </div>
     `
 })
 
-export class AppComponent {
-    name: string = '';
-}
+export class AppComponent { }
