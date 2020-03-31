@@ -1,14 +1,15 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
     template: `
-        <label>Insert your name:   </label>
-        <input [(ngModel)]="name" placeholder="name">
-        <h1>Welcome {{name}}!</h1>
-    `
+        <div [ngStyle]="{'font-size':'13px', 'font-family':'Verdana'}"> <!-- Styles binging using "ngStyle" directive -->
+            <h1>Angular 9 "ngStyle" directive </h1>
+            <p [style.font-size]="'14px'" [style.font-family]="'Segoe Print'"> <!-- Styles binding using properties of "style" object -->
+                Angular 9 provides a module architecture of app
+            </p>
+        </div>
+    `,
 })
 
-export class AppComponent {
-    name: string = '';
-}
+export class AppComponent { }
