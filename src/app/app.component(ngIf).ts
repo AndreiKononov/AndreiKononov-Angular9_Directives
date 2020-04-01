@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'ngIF',
+    selector: 'ng-if-comp',
     template: `
         <p>Using *ngIF only</p>
         <p *ngIf="condition">
@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
     `
 })
 
-export class AppComponent {
+export class AppComponentNgIf {
 
     condition: boolean = true;
 
