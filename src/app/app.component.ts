@@ -1,14 +1,22 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <label>Insert your name:   </label>
-        <input [(ngModel)]="name" placeholder="name">
-        <h1>Welcome {{name}}!</h1>
-    `
+    template:`
+        <p *while="condition">
+            Hello Andrei!
+        </p>
+        <p *while="!condition">
+            Bye-bye
+        </p>
+        <button (click)="toggle()">Toggle</button>`
 })
 
 export class AppComponent {
-    name: string = '';
+
+    condition: boolean = true;
+
+    toggle() {
+        this.condition = !this.condition;
+    }
 }
